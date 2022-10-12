@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+       default-init-method="init"
+       default-destroy-method="destroy">
+    <!--    List documentList;-->
+    <!--    Set documentSet;-->
+    <!--    Map documentMap;-->
+    <!--    Properties documentProp;-->
+    <bean id="collectionInjection" class="net.proselyte.collectioInjection.CollectionInjection">
+        <property name="documentList">
+            <list value-type="java.lang.Byte">
+                <value>1</value>
+                <value>2</value>
+                <value>3</value>
+            </list>
+        </property>
+        <property name="documentSet">
+            <set>
+                <value>a1</value>
+                <value>a1</value>
+                <value>c2</value>
+                <value>c2</value>
+                <value>d3</value>
+            </set>
+        </property>
+        <property name="documentMap">
+            <map>
+                <entry key="1" value="aaa1"/>
+                <entry key="2" value="aaa2"/>
+                <entry key="3" value="aaa3"/>
+            </map>
+        </property>
+        <property name="documentProp">
+            <props>
+                <prop key="one">1one</prop>
+                <prop key="two">2one</prop>
+                <prop key="three">3three</prop>
+            </props>
+        </property>
+    </bean>
+
+
+</beans>

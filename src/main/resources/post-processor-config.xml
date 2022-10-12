@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+       default-init-method="init"
+       default-destroy-method="destroy">
+
+    <bean id="message" class="net.proselyte.postprocessor.Message">
+        <property name="message" value="This message from simple bean."/>
+        <property name="name" value="This name."/>
+    </bean>
+
+    <bean id="secondBean" class="net.proselyte.postprocessor.SecondBean">
+        <property name="age" value="10"/>
+    </bean>
+
+    <bean class="net.proselyte.postprocessor.BeanProcessorImpl"/>
+
+</beans>
